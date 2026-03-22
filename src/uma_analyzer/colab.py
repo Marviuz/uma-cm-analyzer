@@ -30,8 +30,6 @@ def analyze_google_sheet(
 ) -> Analyzer:
     """Load and analyze data from a Google Spreadsheet.
     
-    Requires gspread and Google OAuth credentials.
-    
     Args:
         sheet_url: URL to the Google Spreadsheet
         sheet_name: Name of the sheet tab (default: "Sheet1")
@@ -39,16 +37,32 @@ def analyze_google_sheet(
     Returns:
         Analyzer instance ready for querying
     """
-    import gspread
     from google.colab import auth
+    from googleapiclient.discovery import build
+    
     auth.authenticate_user()
     
-    gc = gspread.authorize(auth.default_credentials())
+    # Extract spreadsheet ID from URL
+    # Format: https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit
+    spreadsheet_id = sheet_url.split("/d/")[1].split("/")[0]
     
-    spreadsheet = gc.open_by_url(sheet_url)
-    worksheet = spreadsheet.worksheet(sheet_name)
+    service = build("sheets", "v4", credentials=auth.get_user_credentials())
     
-    df = pd.DataFrame(worksheet.get_all_records())
+    result = (
+        service.spreadsheets()
+        .values()
+        .get(spreadsheetId=spreadsheet_id, range=sheet_name)
+        .execute()
+    )
+    
+    values = result.get("values", [])
+    if not values:
+        raise ValueError("No data found in sheet")
+    
+    headers = values[0]
+    data = values[1:]
+    
+    df = pd.DataFrame(data, columns=headers)
     df.columns = df.columns.str.strip()
     
     csv_path = Path("/tmp/uma_data.csv")
