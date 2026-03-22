@@ -1,0 +1,16 @@
+Race_ID,Uma_Name,Strategy,Speed,Stamina,Power,Guts,Wisdom,Dist_S,Surface_S,Track_S,Skills_Activated,Rank,Distance_Diff
+101,Kitasan Black,front-runner,1500,800,1100,900,1200,1,0,1,Angling_Scheming;Top_Runner;Arc_Maestro,1,0.0
+101,Grass Wonder,late-surger,1450,750,1200,800,1100,1,1,0,Non_Stop_Girl;Ogre;Swift_Sword,4,3.5
+101,Mejiro Ardan,pace-chaser,1480,820,1050,850,1150,0,0,0,Speedy_Runner;決意の直滑降,2,1.5
+101,Tokaitext,Pace-Chaser,1460,780,1080,820,1100,0,0,0,Clamp;Running_Wild,3,2.0
+101,Mejiro McQueen,end-closer,1400,900,1200,1000,1000,1,0,0,Cool_Down;Shadow_Break;Straight_Shot,5,4.0
+102,Kitasan Black,front-runner,1500,800,1100,900,1200,1,0,1,Angling_Scheming;Top_Runner;Arc_Maestro,3,2.0
+102,Rice Shower,end-closer,1400,900,1200,1000,1000,1,0,0,Cool_Down;Shadow_Break;Straight_Shot,1,0.0
+102,Symboli Rudolf,pace-chaser,1470,810,1100,880,1150,0,1,0,集中就跑;Good_Slider;Pin_Misery,2,1.0
+102,Grass Wonder,late-surger,1450,780,1150,850,1080,1,1,0,Non_Stop_Girl;Swift_Sword;Lunge,6,5.0
+102,Mejiro Ardan,pace-chaser,1490,800,1050,830,1200,0,0,0,Speedy_Runner;Concentrate,4,3.0
+103,Tokaitext,end-closer,1380,950,1150,950,1050,0,0,1,Cool_Down;直線回復;Straight_Shot,1,0.0
+103,Kitasan Black,front-runner,1520,750,1120,880,1180,1,0,1,Top_Runner;Arc_Maestro;Angling_Scheming,2,0.5
+103,Mejiro McQueen,late-surger,1420,850,1180,920,1100,1,1,0,Non_Stop_Girl;Swift_Sword,3,1.5
+103,Symboli Rudolf,pace-chaser,1460,830,1080,860,1120,0,1,0,Good_Slider;Pin_Misery,5,3.5
+103,Grass Wonder,front-runner,1480,720,1200,800,1150,1,1,0,Angling_Scheming;Lunge,7,6.0
